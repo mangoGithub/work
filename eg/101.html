@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模拟手机短信特效</title>
+<link href="../../作品/eg/css/public.css" rel="stylesheet" />
+<link href="../../作品/eg/css/img.css" rel="stylesheet" />
+<script src="../../作品/eg/js/public.js"></script>
+<style>
+*{margin:0px; padding:0px;}
+.iph{width:355px; height:654px; background:url(../img/1.jpg) no-repeat; margin:10px auto; padding:96px 0px 0px 37px;}
+.ip_x{width:319px; height:500px; /*-background:#eee;*/ overflow:auto; overflow-x:hidden;}
+.ip_f{width:299px; height:34px; line-height:34px; background:#333; padding:5px 10px;}
+.ip_lay{display:block; padding:0px 5px; margin:5px; color:#fff; width:90%;}
+.ip_lay b{display:inline-block; padding:6px; font:12px/18px "微软雅黑"; font-weight:100;max-width:80%;}
+
+.fl{float:left;}
+.fr{float:right;}
+.alignr{text-align:right;}
+.ip_x img{margin:0px 3px;}
+.clear:after{content:'.'; height:0px; visibility:hidden; overflow:hidden; display:block; clear:both;}
+.wrap { table-layout:fixed; word-break: break-all; overflow:hidden;}
+.bgl{ background:#FF6699;}
+.bgr{background:#3366FF;}
+#txt{width:180px; height:30px; line-height:30px;}
+#bnt{width:50px; height:30px; line-height:30px; border:1px solid #eee;}
+</style>
+</head>
+
+<body>
+<div class="Itop">
+	<div class="lay">
+		<div class="Ilogo" id="logo">我的作品</div>
+		<ul class="Inav" id="nav">
+			<li><a href="../../作品/eg/index.html" target="_blank">简历</a></li>
+			<li><a href="../../作品/eg/eg.html" target="_blank">实例</a></li>
+			<li><a href="../../作品/eg/status.html" class="act" target="_blank">常用</a></li>
+			<li><a href="../../作品/eg/work.html" target="_blank">练习</a></li>
+			<li><a href="../../作品/eg/know.html" target="_blank">概念</a></li>
+		</ul>
+	</div>
+</div>
+<div class="iph">
+	<div class="ip_x clear" id="ip"></div>
+	<div class="ip_f">
+		<img src="../img/2.jpg" id="user" width="30" height="30" align="absmiddle"/>
+		<input type="text" id="txt" value=""/>
+		<input type="submit" id="bnt" value="提交"/>
+	</div>
+</div>
+</body>
+</html>

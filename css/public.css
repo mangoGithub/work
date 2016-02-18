@@ -1,0 +1,50 @@
+body,div,p,select,option,ul,ol,li,dl,dd,dt,table,tr,td,h1,h2,h3,h4,h5,img,b,i,input{padding:0px;margin:0px;}
+body{background:#f2f2f2;}
+
+em {font-style: normal;}
+a{ text-decoration:none;}
+ul,ol,li{ list-style:none;}
+
+.clear:after{content:'.'; height:0px; visibility:hidden; overflow:hidden; display:block; clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+.filter{filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+.bom{height:80px; background:#666; color:#fff; text-align:center; line-height:80px; font-size:18px;}
+.textoverflow {
+display: inline-block;
+white-space: nowrap;
+word-wrap: normal;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: 100%;
+vertical-align: -2px;
+_width: 100%;
+}
+.lay{width:960px; margin:0px auto; position:relative; }
+.Itop{border-bottom:5px solid #FF5079;height:110px;}
+.Itop .Ilogo{width:150px; height:150px; background:#FF5079; border:3px solid #999; position:absolute; top:-50px; left:10px;border-radius: 50%; color:#fff; line-height:170px; text-align:center; font-weight:bold; font-size:24px; font-family:'楷体';box-shadow: 0 5px 6px rgba(0,0,0,0.1);-webkit-transition: 0.2s;
+-moz-transition: 0.2s;
+transition: 0.2s; z-index:1;}
+.Itop .Inav{background:#FF5079; position:absolute; top:30px; width:710px; right:0px; padding-left:100px;box-shadow: 0 5px 6px rgba(0,0,0,0.1);border-radius:4px;-webkit-transition: 0.2s;
+-moz-transition: 0.2s;
+transition: 0.2s;}
+.Itop .Inav li{ float:left; padding:0px 10px;}
+.Itop .Inav li a{font-size:14px; color:#fff; display:inline-block; font-weight:bold; padding:10px 20px;}
+.Itop .Inav li a:hover,.Itop .Inav li .act{background:#eee; color:#FF5079; padding:10px 20px;}
+.Ilay{width:960px;  margin:10px auto;}
+
+#btn { width: 50px; height: 50px; background: #333; position: fixed; _position: absolute; right: 10px; bottom: 10px; -display: none; z-index:3; color:#fff; text-align:center;  border-radius:4px; box-shadow: 0 5px 6px rgba(0,0,0,0.1); font-size:20px; font-weight:bold; cursor:pointer;}
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 15px solid #fff;
+	position:absolute;
+	top:-15px;
+	left:30px;
+}

@@ -1,0 +1,152 @@
+/*---------我的简历---------*/
+body{width:100%; height:100%; background:url(../img/index.png) top center no-repeat fixed;}
+.resume{width:100%; }
+.resume .reImg{ width:150px; background:#fff; float:left;border-radius: 5%; padding:10px;}
+.resume .reWord{width:740px; padding:10px; float:left;font-family: tahoma, '楷体';}
+.resume .reWord h2{color: #7ebad0;max-width: 10em;
+_width: 150px;
+font-size: 36px;
+line-height: 40px;
+height: 40px;
+vertical-align: middle;}
+.resume .reWord p{ line-height:25px;color:#DEDADA; font-size:18px; font-weight:700;}
+.resume .reWord p span{ font-size:16px; display:inline-block; padding-right:53px; color:#A5A5A5;font-weight:100;}
+
+.Ilay .container{width:100%; margin:20px 0px; position:relative; height:1500px;}
+.container .conL{width:80px; float:left; position:absolute; top:20px; left:0px;}
+.container .conL .ol{width:100%; display:block;}
+.container .conL a {
+line-height:36px;
+float: right;
+border-right: 2px solid #c8c8c8;
+border-right-color: rgba(200,200,200,.5);
+padding-right: 5px;
+text-align: right;
+color: #a5a5a5;
+text-shadow: 0 1px 1px rgba(0,0,0,.3);
+}
+.container .conL a:hover{border-right-color: #FF5079; text-decoration:underline;}
+.container .conR{width:840px; padding-left:20px; float:left; position:absolute; left:80px; top:20px;}
+.container .conR .conDetail{width:660px; float:left; padding-left:40px;}
+.container .conR .conDetail li{width:690px; background:#E2E2E2; position:relative; margin-bottom:20px;box-shadow: 0 5px 6px rgba(0,0,0,0.1); border-radius:5px;}
+.container .conR .conLine{width:3px; height:1430px; background:url(../img/bg_tml_spine.png) repeat-y; display:block; float:left; margin-left:100px;}
+.container .conR .arrow_dot {
+position: absolute;
+z-index: 1;
+top: -2px;
+left: -50px;
+width: 16px;
+height: 16px;
+background:url(../img/curriculumMoreNav.png) 0px 16px;
+}
+.container .conR .hover_dot {
+position: absolute;
+z-index: 1;
+top: 0px;
+left: -50px;
+width: 16px;
+height: 16px;
+background:url(../img/curriculumMoreNav.png);
+}
+.container .conR .arr_tit {
+position: absolute;
+z-index: 1;
+top: -2px;
+left: -140px;
+font-size:20px; color:#FF5079;
+font-family:'楷体';
+}
+.container .conR .arr_triangle{
+border-color: transparent #e2e2e2 transparent transparent;
+border-width: 10px 10px 10px 0;
+border-style: dashed solid dashed dashed;
+position: absolute;
+z-index: 1;
+top: 10px;
+left: -10px;
+}
+.arr_txt{padding:10px; width:90%; line-height:25px; margin:0px auto; font-family:'宋体';}
+.bor_bom{border-bottom:2px solid #FF5079; }
+.arr_txt h1{font-size:18px;width:100%; color:#333;}
+.arr_txt p{font-size:16px; width:100%; color:#666;}
+
+
+/*-------------------------综合实例--------------------------*/
+.egLay{margin:10px auto; position:relative; width:990px;}
+.list{width: 330px; -position:absolute; float:left; margin-bottom:20px;}
+
+.limg{position:relative;}
+.limg img {
+border-radius:4px;
+}
+.limg .lword{width:100%; display:inline-block; font-size:16px; color:#fff; position:absolute; left:0px; top:50%; font-weight:bold; text-align:center;}
+
+.marS{-webkit-transform: scale(0.9);
+-moz-transform: scale(0.9);
+transform: scale(0.9);
+margin-top: 5px;}
+/*-----------------拾色器------------------------*/
+.color{width:960px;margin:10px auto;}
+.cBtn{width:100px; height:35px; line-height:35px; display:block; color:#fff; text-align:center;  border-radius:4px; box-shadow: 0 5px 6px rgba(0,0,0,0.1); background:#FF5079; font-size:14px;}
+
+.cLay{background:#eee; width:940px; height:0px; line-height:50px; padding:0px 10px; margin-top:10px;border-radius:4px; box-shadow: 0 5px 6px rgba(0,0,0,0.1);position:relative; overflow:hidden;}
+
+.cLay .cBg{font-size:14px; color:#9BB24C; display:inline-block;}
+.cLay .cDs{ font-size:12px; color:#666; display:inline-block; padding-left:20px;}
+.cLay .cA{width: 14px;
+height: 14px;box-shadow: 0 5px 6px rgba(0,0,0,0.1);
+background-color:#F9F9EF;
+border: 1px solid #ddd; display:inline-block;}
+.cLay .cA i{margin: 2px;
+width: 10px;
+height: 10px;
+background-color: #333; display:inline-block;}
+.cLay .cFile{width: 80px;
+height: 16px; line-height:16px; text-align:center; color:#666;
+background-color:#F9F9EF;border-radius:4px; box-shadow: 0 5px 6px rgba(0,0,0,0.1);
+border: 1px solid #ddd; display:inline-block; font-size:12px;}
+.cLay .cV{font-size:12px; color:#9BB24C;}
+.cLay .cEx{width:230px; height:300px; background:#fff;border-radius:4px; box-shadow: 0 5px 6px rgba(0,0,0,0.1); position:absolute; top:40px; left:120px; display:none;}
+.cLay .cFi{width:250px; height:150px; background:#fff;border-radius:4px; box-shadow: 0 5px 6px rgba(0,0,0,0.1); position:absolute; top:40px; left:240px; display:none;}
+.cClose{display:inline-block;color:#999; font-size:20px; font-weight:bold;  padding:10px; cursor:pointer; width:90%; text-align:right; height:10px; line-height:10px;}
+.cP{ width:80%; margin:10px auto; color:#0080c0; background:#eee; border:1px solid #ccc; padding:10px; text-align:center; display:block;}
+.cC{width:95%; margin:0px auto;}
+#picker{padding-left:10px;}
+.cFi41{display: block;
+cursor: pointer;
+width: 120px;
+height: 30px;
+left: 68px;
+filter: alpha(opacity=0);
+opacity: 0;
+position: absolute;
+z-index: 99;
+top: 75px;
+visibility: visible;
+color: #fff;}
+.bbl-btn {
+width: 120px;
+height: 30px;
+width: 120px;
+margin: 15px 0 0 60px;
+background-image: url(../img/button.png);
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+cursor: pointer;
+}
+.bbl-btn:hover {
+color: #fff;
+background-position: -5px -411px;
+text-decoration: none;
+border: 1px solid #1c82bf;
+}
+.bbl-btn {
+color: #fff;
+background-position: -5px -361px;
+border: 1px solid #449acd;
+}
+.cWw{font-size:14px; color:#999; width:100%; display:block; text-align:center; margin:10px 0px; height:10px; line-height:10px;}
+
+.exU{width:920px; padding:20px; background:#FFF; margin:10px 0px;}
+.exU li{line-height:30px;font-size:14px; color:#666; width:50%; float:left; border-bottom:2px solid #FF5079;}

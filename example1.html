@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>实例一：改变页面背景颜色和图片</title>
+<link href="css/public.css" rel="stylesheet" />
+<link href="css/person.css" rel="stylesheet" />
+<link href="css/farbtastic.css" rel="stylesheet"/>
+<style>
+body{background:none;}
+</style>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/farbtastic.js"></script>
+<script type="text/javascript" src="js/tween.js"></script>
+<script type="text/javascript" src="js/move.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+   $('.cBtn').click(function(){
+   		if($('.cLay').attr('name') == 'vivi'){
+			$('.cLay').css('overflow','hidden')
+			$('.cLay').animate({height:0}).removeAttr('name','vivi');
+			$('.cEx').css('display','none');
+		}else{
+			$('.cLay').css('overflow','inherit')
+			$('.cLay').animate({height:50}).attr('name','vivi');
+			
+		}
+   });
+   $('.cA').click(function(){
+   		$('.cEx').css('display','block');
+		$('.cFi').css('display','none')
+   })
+   $('.cClose').click(function(){
+   		$('.cEx').css('display','none');
+		$('.cFi').css('display','none');
+   });
+   $('#picker').farbtastic('.body');
+   $('.cFile').click(function(){
+   		$('.cEx').css('display','none');
+		$('.cFi').css('display','block');
+   });
+   //使用jQuery在上传图片之前实现缩略图预览
+   $(".cFi41").change(function(){
+    var files = !!this.files ? this.files : [];
+    if (!files.length || !window.FileReader) return;
+    if (/^image/.test( files[0].type)){
+        var reader = new FileReader();
+        reader.readAsDataURL(files[0]);
+        reader.onloadend = function(){
+       $("body").css("background", "url("+this.result+") no-repeat");
+        }
+    }
+});
+
+   $("#Checkbox1").click(function(){
+ 		$(this).is(":checked")?$("body").css("backgroundRepeat","repeat"):$("body").css("backgroundRepeat","no-repeat");
+   });
+   $("#CheckFix").click(function(){
+   		$(this).is(":checked")?$("body").css("background-attachment","fixed"):$("body").css("background-attachment","inherit");
+   });
+   //JQuery 绑定select标签的onchange事件
+   $("#Select").change(function(){
+		var txt = $(this).children("option:selected").val();
+		if( txt == '居左'){
+			$("body").css("background-position","left");
+		}else if(txt == '居中'){
+			$("body").css("background-position","center");
+		}else{
+			$("body").css("background-position","right");
+		}
+   });
+   $('.cV').click(function(){
+   		$("body").css("background","");
+   });
+});
+
+</script>
+</head>
+<body class="body">
+<div class="Itop">
+	<div class="lay">
+		<div class="Ilogo" id="logo">我的作品</div>
+		<ul class="Inav" id="nav">
+			<li><a href="index.html">我的简历</a></li>
+			<li><a href="eg.html" class="act">综合实例</a></li>
+			<li><a href="status.html">ajax和JSONP</a></li>
+			<li><a href="work.html">对象和组件开发</a></li>
+			<li><a href="know.html">概念</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="lay">
+	<div class="color" id="farColor">
+		<a href="javascript:;" class="cBtn">页面美化</a>
+		<div class="cLay">
+			<h2 class="cBg">页面背景：</h2>
+			<span class="cDs">底色：</span>
+			<a href="javascript:;" class="cA">
+				<i></i>			</a>
+			<span class="cDs">图片：</span>
+			<a href="javascript:;" class="cFile">上传图片</a>
+			<span class="cDs">
+				<input type="checkbox" id="Checkbox1" /> 平铺			</span>
+			<span class="cDs">
+				<input type="checkbox" id="CheckFix" /> 锁定			</span>
+			<select id="Select">
+				<option selected="selected">居左</option>
+				<option>居中</option>
+				<option>居右</option>
+			</select>
+			<a href="javascript:;" class="cV">移除图片</a>
+			<div class="cEx clear">
+				<div class="triangle-up"></div>
+				<span class="cClose">X</span>
+				
+					<input type="text" class="cP body" name="color" value="#123456" />	
+			
+				
+				<div class="cC">
+					<div id="picker"></div>
+				</div>
+			</div>
+			<div class="cFi">
+				<div class="triangle-up"></div>
+				<span class="cClose">X</span>
+				<div class="cC">
+					<span class="cWw">支持JPG/PNG图片，文件需小于2M</span>
+					<form action="1.php" method="post"  enctype="multipart/form-data">
+						<input type="button" class="bbl-btn" value="选择文件" />
+						<input type="file" class="cFi41" name="Files"/>
+					</form>
+				</div>			
+			</div>
+		</div>
+		
+	</div>
+	<ul class="exU clear">
+		<li>特效分析：
+			<p>1,首先点击按钮页面美化弹出层，第二点击层隐藏；</p>
+			<p>2,点击“底色块”弹出拾色器层</p>
+			<p>3,用拾色器改变页面背景的颜色</p>
+			<p>4,点击“上传图片”弹出file层</p>
+			<p>5,点击file上传图片，从而改变页面背景图片（难点）</p>
+			<p>6,点击平铺勾选，使图片平铺到整个页面</p>
+			<p>7,点击锁定勾选，使图片锁定到页面</p>
+			<p>8,选择居中方式：使图片在页面上的位置发生变化</p>
+			<p>9,点击“移除图片”把图片从页面上移除</p>
+		</li>
+		<li>
+			相应的知识点：
+			<p>1，这个改变的是高度，从而有运动特效（tween和move）</p>
+			<p>2，显示出后的“关闭”，点击X或页面其他位置（冒泡 ev.cancelBubble）</p>
+			<p>3，索取拾色器页面值，从而去改变body的background值</p>
+			<p>4，同2</p>
+			<p>5，怎么获取上传选择图片（？？？）</p>
+			<p>6，background中的repeat</p>
+			<p>7，no-repeat</p>
+			
+			<p>9,background值去除</p>
+		</li>
+		<li>
+			细节：
+			<p>1,
+				<a href="http://www.open-open.com/lib/view/open1388325939813.html">
+				使用jQuery在上传图片之前实现缩略图预览
+				</a>
+			</p>
+			<p>2,
+				<a href="http://www.markdream.com/code/image-preview.shtml">
+				Javascript/js兼容各个浏览器的本地图片上传即时预览效果
+				</a>
+			</p>
+			<p>
+				3,jq复选框是否选中
+				$("#Checkbox1").is (":checked")?"已婚":"未婚";//获取复选框按钮值 
+			</p>
+			<p>
+				4,页面在代码统一：要用js都用js，要用jq都用jq；
+			</p>
+			<p>5,JQuery 绑定select标签的onchange事件
+				$("#Select").change(function(){
+		var txt = $(this).children("option:selected").val();
+		if( txt == '居左'){
+			$("body").css("background-position","left");
+		}else if(txt == '居中'){
+			$("body").css("background-position","center");
+		}else{
+			$("body").css("background-position","right");
+		}
+   });
+			</p>
+		</li>
+		
+	</ul>
+</div>
+
+</body>
+</html>
